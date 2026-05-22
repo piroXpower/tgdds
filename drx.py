@@ -41,12 +41,12 @@ active_attacks = []
 user_cooldowns = {} 
 
 CONFIG = {
-    "max_time": 240,
-    "max_slots": 5,
+    "max_time": 80,
+    "max_slots": 3,
     "maintenance": False,
-    "footer": "@DRX_POWER",
-    "cooldown": 60,  # Default cooldown 60 seconds (Ise aap /customize se change kar sakenge)
-    "feedback_group_id": -1003906465304, # Apne group ki ID yahan dalein
+    "footer": "@BeMySugarBaby",
+    "cooldown": 30,  # Default cooldown 60 seconds (Ise aap /customize se change kar sakenge)
+    "feedback_group_id": -1001932635321, # Apne group ki ID yahan dalein
 }
 # --- [ EXPIRY CONFIGURATION ] ---
 # Format: datetime(Year, Month, Day, Hour, Minute, Second)
@@ -58,7 +58,7 @@ SCRIPT_EXPIRY = datetime(2026, 5, 15, 12, 30, 30)
 def handle_expired_script(message):
     bot.reply_to(
         message, 
-        "⚠️ <b>SCRIPT EXPIRE OWNER TO BUY PREMIUM SCRIPT @TG_DEVILOP</b>", 
+        "⚠️ <b>SCRIPT EXPIRE OWNER TO BUY PREMIUM SCRIPT @BeMySugarBaby</b>", 
         parse_mode="HTML")
         
 def is_script_expired():
@@ -140,7 +140,7 @@ def send_welcome_pro(message):
     status = "Authorized ✅" if has_access(user_id) else "No Plan ❌"
     
     res = (
-        f"🔥 <b>𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐓𝐑𝐗-𝐃𝐃𝐎𝐒</b>\n"
+        f"🔥 <b>𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐃𝐃𝐎𝐒</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"🚀 <b>𝐒𝐭𝐚𝐭𝐮𝐬:</b> <b>{status}</b>\n"
         f"👤 <b>𝐘𝐨𝐮𝐫 𝐈𝐃:</b> <code>{user_id}</code>\n"
@@ -166,7 +166,7 @@ def send_help(message):
 
     # 1. Header (Indentation Fixed)
     help_text = (
-        "🛠️ <b>𝐓𝐑𝐗-𝐃𝐃𝐎𝐒 𝐇𝐄𝐋𝐏 𝐌𝐄𝐍𝐔</b>\n"
+        "🛠️ <b>𝐃𝐃𝐎𝐒 𝐇𝐄𝐋𝐏 𝐌𝐄𝐍𝐔</b>\n"
         "━━━━━━━━━━━━━━━━━━━━━━\n"
     )
 
@@ -669,7 +669,7 @@ def clear_expired_users(message):
 @bot.message_handler(commands=['rules'])
 def show_rules(message):
     rules_text = (
-        f"📜 <b>𝐓𝐑𝐗-𝐃𝐃𝐎𝐒 𝐔𝐒𝐄𝐑 𝐑𝐔𝐋𝐄𝐒</b>\n"
+        f"📜 <b>𝐃𝐃𝐎𝐒 𝐔𝐒𝐄𝐑 𝐑𝐔𝐋𝐄𝐒</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"1️⃣ Ek baar mein ek hi attack allowed hai.\n"
         f"2️⃣ Same IP/Port par baar-baar attack na karein.\n"
@@ -858,7 +858,7 @@ def check_user_id(message):
 def view_plans_pro(message):
     # Professional VIP Plan Design
     plan_msg = (
-        f"💎 <b>𝐓𝐑𝐗-𝐃𝐃𝐎𝐒 𝐕𝐈𝐏 𝐌𝐄𝐍𝐔</b>\n"
+        f"💎 <b>𝐃𝐃𝐎𝐒 𝐕𝐈𝐏 𝐌𝐄𝐍𝐔</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"🚀 <b>𝐔𝐒𝐄𝐑 𝐀𝐓𝐓𝐀𝐂𝐊 𝐏𝐋𝐀𝐍𝐒</b>\n"
         f"🕒 1 Hour Attack: ₹20\n"
@@ -1282,7 +1282,7 @@ def send_news(message):
         try:
             # Professional News Layout
             bot.send_message(uid, (
-                f"🛰️ <b>𝐃𝐑𝐗-𝐏𝐎𝐖𝐄𝐑 𝐁𝐎𝐓 𝐔𝐏𝐃𝐀𝐓𝐄</b>\n"
+                f"🛰️ <b>𝐏𝐎𝐖𝐄𝐑 𝐁𝐎𝐓 𝐔𝐏𝐃𝐀𝐓𝐄</b>\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
                 f"{news_content}\n\n"
                 f"━━━━━━━━━━━━━━━━━━━━━━\n"
@@ -1325,7 +1325,7 @@ def process_feedback_photo(message):
 @bot.message_handler(commands=['prices'])
 def price_list(message):
     prices = (
-        f"💰 **𝐃𝐑𝐗-𝐏𝐎𝐖𝐄𝐑 𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓**\n"
+        f"💰 **𝐏𝐎𝐖𝐄𝐑 𝐏𝐑𝐈𝐂𝐄 𝐋𝐈𝐒𝐓**\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n"
         f"🕒 **𝟏 𝐇𝐨𝐮𝐫:** `₹20`\n"
         f"📅 **𝟏 𝐃𝐚𝐲:** `₹80`\n"
@@ -1480,7 +1480,7 @@ def show_master_admin_commands(message):
         return
 
     master_list = (
-        f"👑 <b>𝐃𝐑𝐗-𝐏𝐎𝐖𝐄𝐑 𝐌𝐀𝐒𝐓𝐄𝐑 𝐂𝐎𝐍𝐓𝐑𝐎𝐋</b>\n"
+        f"👑 <b>𝐏𝐎𝐖𝐄𝐑 𝐌𝐀𝐒𝐓𝐄𝐑 𝐂𝐎𝐍𝐓𝐑𝐎𝐋</b>\n"
         f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
         
         f"🛠️ <b>𝐀𝐃𝐌𝐈𝐍 𝐏𝐎𝐖𝐄𝐑𝐒:</b>\n"
